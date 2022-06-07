@@ -1,0 +1,255 @@
+\changetocdepth {3}
+\babel@toc {english}{}\relax
+\contentsline {section}{ \hspace {-0.55cm}Dédicaces }{i}{chapter*.1}%
+\contentsline {section}{ \hspace {-0.55cm}Remerciements }{ii}{chapter*.2}%
+\contentsline {section}{ \hspace {-0.55cm}Table de matières }{iii}{chapter*.2}%
+\contentsline {section}{ \hspace {-0.55cm}List of Symbols }{vii}{chapter*.4}%
+\contentsline {section}{ \hspace {-0.55cm}List of Acronyms }{viii}{chapter*.5}%
+\contentsline {section}{ \hspace {-0.55cm}List of Tables }{ix}{chapter*.5}%
+\contentsline {section}{ \hspace {-0.55cm}List of Figures }{x}{section*.6}%
+\contentsline {section}{ \hspace {-0.55cm}Résumé }{xii}{chapter*.8}%
+\contentsline {section}{ \hspace {-0.55cm}Abstract }{xiii}{chapter*.9}%
+\contentsline {chapter}{ \hspace {-0.25cm}Introduction }{1}{chapter*.10}%
+\ttl@starttoc {chapters@1}
+\ttl@starttoc {chapters@1}
+\contentsline {section}{ \hspace {-0.55cm}Le contexte du travail }{1}{section*.11}%
+\ttl@stoptoc {chapters@1}
+\contentsline {paragraph}{}{2}{section*.11}%
+\contentsline {paragraph}{}{2}{section*.11}%
+\ttl@starttoc {chapters@1}
+\contentsline {section}{ \hspace {-0.55cm}La problématique étudiée }{3}{section*.12}%
+\ttl@stoptoc {chapters@1}
+\contentsline {paragraph}{}{3}{section*.12}%
+\ttl@starttoc {chapters@1}
+\contentsline {section}{ \hspace {-0.55cm}Objectif }{4}{section*.13}%
+\ttl@stoptoc {chapters@1}
+\contentsline {paragraph}{}{4}{section*.13}%
+\ttl@starttoc {chapters@1}
+\contentsline {section}{ \hspace {-0.55cm}Plan de notre travail }{4}{section*.14}%
+\ttl@stoptoc {chapters@1}
+\contentsline {chapter}{\chapternumberline {I}Généralité sur la sécurité des systèmes d'information}{5}{chapter.1}%
+\ttl@stoptoc {chapters@1}
+\ttl@starttoc {chapters@2}
+\ttl@starttoc {chapters@2}
+\contentsline {section}{\numberline {I.1}Introduction}{5}{section.1.1}%
+\ttl@stoptoc {chapters@2}
+\ttl@starttoc {chapters@2}
+\contentsline {section}{\numberline {I.2}Sécurité des systèmes d'information}{5}{section.1.2}%
+\ttl@stoptoc {chapters@2}
+\contentsline {subsection}{\numberline {I.2.1}Définition de la sécurité}{5}{subsection.1.2.1}%
+\ttl@stoptoc {chapters@2}
+\contentsline {subsection}{\numberline {I.2.2}Confidentialité}{6}{subsection.1.2.2}%
+\ttl@stoptoc {chapters@2}
+\contentsline {subsection}{\numberline {I.2.3}Intégrité}{6}{subsection.1.2.3}%
+\ttl@stoptoc {chapters@2}
+\contentsline {subsection}{\numberline {I.2.4}Disponibilité}{7}{subsection.1.2.4}%
+\ttl@stoptoc {chapters@2}
+\contentsline {paragraph}{}{7}{subsection.1.2.4}%
+\ttl@starttoc {chapters@2}
+\contentsline {section}{\numberline {I.3}Contrôle d'accès}{7}{section.1.3}%
+\ttl@stoptoc {chapters@2}
+\contentsline {subsection}{\numberline {I.3.1}Définition du contrôle d'accès}{7}{subsection.1.3.1}%
+\ttl@stoptoc {chapters@2}
+\contentsline {paragraph}{}{7}{figure.caption.15}%
+\contentsline {subsection}{\numberline {I.3.2}Le contrôle d'accès et les autres services}{8}{subsection.1.3.2}%
+\ttl@stoptoc {chapters@2}
+\contentsline {subsection}{\numberline {I.3.3}Politique de sécurité}{9}{subsection.1.3.3}%
+\ttl@stoptoc {chapters@2}
+\contentsline {subsection}{\numberline {I.3.4}Conclusion}{10}{subsection.1.3.4}%
+\ttl@stoptoc {chapters@2}
+\contentsline {chapter}{\chapternumberline {II}état de l'art sur les politiques et modèles de contrôle d'accès}{11}{chapter.2}%
+\ttl@stoptoc {chapters@2}
+\ttl@starttoc {chapters@3}
+\contentsline {subsection}{\numberline {II.0.1}Introduction}{11}{subsection.2.0.1}%
+\ttl@stoptoc {chapters@3}
+\contentsline {paragraph}{}{12}{subsection.2.0.1}%
+\ttl@starttoc {chapters@3}
+\contentsline {section}{\numberline {II.1}Politiques et modèles de contrôle d'accès discrétionnaires (DAC)}{12}{section.2.1}%
+\ttl@stoptoc {chapters@3}
+\contentsline {paragraph}{}{13}{section.2.1}%
+\contentsline {subsection}{\numberline {II.1.1}Modèle de matrice d'accès}{13}{subsection.2.1.1}%
+\ttl@stoptoc {chapters@3}
+\contentsline {paragraph}{}{13}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {II.1.2}Implémentation des politiques discrétionnaires}{14}{subsection.2.1.2}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsubsection}{\numberline {II.1.2.1}Liste de contrôle d'accès}{14}{subsubsection.2.1.2.1}%
+\ttl@stoptoc {chapters@3}
+\contentsline {paragraph}{}{14}{subsubsection.2.1.2.1}%
+\contentsline {subsubsection}{\numberline {II.1.2.2}Les capacités}{14}{subsubsection.2.1.2.2}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.1.3}Vulnérabilité des politiques discrétionnaire}{15}{subsection.2.1.3}%
+\ttl@stoptoc {chapters@3}
+\ttl@starttoc {chapters@3}
+\contentsline {section}{\numberline {II.2}Politiques et modèles de contrôle d'accès obligatoire (MAC)}{16}{section.2.2}%
+\ttl@stoptoc {chapters@3}
+\contentsline {paragraph}{}{16}{section.2.2}%
+\contentsline {paragraph}{}{17}{section.2.2}%
+\contentsline {paragraph}{}{17}{section.2.2}%
+\contentsline {paragraph}{}{17}{section.2.2}%
+\contentsline {paragraph}{}{18}{section.2.2}%
+\contentsline {subsection}{\numberline {II.2.1}Vulnérabilité des politiques Obligatoire}{18}{subsection.2.2.1}%
+\ttl@stoptoc {chapters@3}
+\ttl@starttoc {chapters@3}
+\contentsline {section}{\numberline {II.3}Politiques et modèles de contrôle d'accès basés sur les rôles (RBAC)}{18}{section.2.3}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.3.1}Composants principaux de RBAC}{19}{subsection.2.3.1}%
+\ttl@stoptoc {chapters@3}
+\contentsline {paragraph}{}{20}{figure.caption.20}%
+\contentsline {subsection}{\numberline {II.3.2}Hiérarchie des rôles}{20}{subsection.2.3.2}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.3.3}Notion de séparation des tâches}{20}{subsection.2.3.3}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.3.4}Avantages du modèle RBAC}{21}{subsection.2.3.4}%
+\ttl@stoptoc {chapters@3}
+\contentsline {paragraph}{}{22}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {II.3.5}Inconvénient du modèle RBAC}{22}{subsection.2.3.5}%
+\ttl@stoptoc {chapters@3}
+\ttl@starttoc {chapters@3}
+\contentsline {section}{\numberline {II.4}Politiques et modèles de contrôle d'accès basé sur les organisations (ORBAC)}{22}{section.2.4}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.4.1}Relations existantes entre les entités du niveau concret et les entités du niveau abstrait }{23}{subsection.2.4.1}%
+\ttl@stoptoc {chapters@3}
+\contentsline {paragraph}{}{25}{subsection.2.4.1}%
+\contentsline {paragraph}{}{25}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {II.4.2}Limites du modèle Or-BAC}{25}{subsection.2.4.2}%
+\ttl@stoptoc {chapters@3}
+\ttl@starttoc {chapters@3}
+\contentsline {section}{\numberline {II.5}Politiques et modèles de contrôle d'accès basés sur les attributs (ABAC)}{25}{section.2.5}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.5.1}Les principaux composants d'ABAC}{26}{subsection.2.5.1}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.5.2}Architecture de fonctionnement du modèle ABAC}{27}{subsection.2.5.2}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.5.3}Avantages du modèle ABAC}{28}{subsection.2.5.3}%
+\ttl@stoptoc {chapters@3}
+\contentsline {paragraph}{}{28}{subsection.2.5.3}%
+\contentsline {paragraph}{}{28}{subsection.2.5.3}%
+\contentsline {paragraph}{}{29}{subsection.2.5.3}%
+\contentsline {paragraph}{}{29}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {II.5.4}Inconvénient du modèle ABAC}{29}{subsection.2.5.4}%
+\ttl@stoptoc {chapters@3}
+\contentsline {paragraph}{}{29}{subsection.2.5.4}%
+\contentsline {paragraph}{}{29}{subsection.2.5.4}%
+\ttl@starttoc {chapters@3}
+\contentsline {section}{\numberline {II.6}Politiques et modèles de contrôle d'accès basés sur les rôles attribués}{30}{section.2.6}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.6.1}Création automatique des permissions en fonction des niveaux d'action et des conteneurs d'objet}{30}{subsection.2.6.1}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.6.2}Attribution automatique des permissions aux rôles à l'aide des attributs}{32}{subsection.2.6.2}%
+\ttl@stoptoc {chapters@3}
+\contentsline {paragraph}{}{32}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {II.6.3}Domaines d'application}{33}{subsection.2.6.3}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.6.4}Inconvénients}{33}{subsection.2.6.4}%
+\ttl@stoptoc {chapters@3}
+\ttl@starttoc {chapters@3}
+\contentsline {section}{\numberline {II.7}Politiques et modèles de contrôle d'accès basés sur les rôles améliorés par les attributs(AERBAC)}{33}{section.2.7}%
+\ttl@stoptoc {chapters@3}
+\contentsline {paragraph}{}{34}{section.2.7}%
+\contentsline {subsection}{\numberline {II.7.1}Composants du modèle AERBAC}{34}{subsection.2.7.1}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.7.2}Modèle formel AERBAC}{36}{subsection.2.7.2}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsubsection}{\numberline {II.7.2.1}Décision d'accès}{37}{subsubsection.2.7.2.1}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.7.3}Inconvénients}{39}{subsection.2.7.3}%
+\ttl@stoptoc {chapters@3}
+\ttl@starttoc {chapters@3}
+\contentsline {section}{\numberline {II.8}Politiques et modèles de contrôle d'accès basés sur les rôles et les attributs(ARBAC)}{39}{section.2.8}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.8.1}Composants du modèle ARBAC}{39}{subsection.2.8.1}%
+\ttl@stoptoc {chapters@3}
+\contentsline {paragraph}{}{41}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {II.8.2}Avantages du modèle ARBAC}{42}{subsection.2.8.2}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.8.3}Inconvénients du modèle ARBAC}{42}{subsection.2.8.3}%
+\ttl@stoptoc {chapters@3}
+\ttl@starttoc {chapters@3}
+\contentsline {section}{\numberline {II.9}Politiques et modèles de contrôle d'accès basés sur la hiérarchie organisationnelle (HOr-RBAC)}{42}{section.2.9}%
+\ttl@stoptoc {chapters@3}
+\contentsline {paragraph}{}{42}{section.2.9}%
+\contentsline {subsection}{\numberline {II.9.1}Composants de base du modèle HOr-BAC}{43}{subsection.2.9.1}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.9.2}Mode de traitement d'une requête dans HOr-BAC}{44}{subsection.2.9.2}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.9.3}Politique de sécurité du modèle HOr-BAC}{44}{subsection.2.9.3}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.9.4}Architecture de fonctionnement du modèle HOr-BAC: parapheur électronique}{45}{subsection.2.9.4}%
+\ttl@stoptoc {chapters@3}
+\contentsline {subsection}{\numberline {II.9.5}Inconvénient du modèle HOr-BAC}{47}{subsection.2.9.5}%
+\ttl@stoptoc {chapters@3}
+\ttl@starttoc {chapters@3}
+\contentsline {section}{\numberline {II.10}Conclusion}{47}{section.2.10}%
+\ttl@stoptoc {chapters@3}
+\contentsline {chapter}{\chapternumberline {III}une approche orientée attributs pour le contrôle d'accès basé sur la hiérarchie organisationnelle (AHOr-BAC)}{49}{chapter.3}%
+\ttl@stoptoc {chapters@3}
+\ttl@starttoc {chapters@4}
+\ttl@starttoc {chapters@4}
+\contentsline {section}{\numberline {III.1}Introduction}{49}{section.3.1}%
+\ttl@stoptoc {chapters@4}
+\ttl@starttoc {chapters@4}
+\contentsline {section}{\numberline {III.2}Concepts de base du modèle AHOr-BAC}{50}{section.3.2}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.2.1}Organisation}{50}{subsection.3.2.1}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.2.2}Employé Métier}{50}{subsection.3.2.2}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.2.3}Ressource}{50}{subsection.3.2.3}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.2.4}Requête}{51}{subsection.3.2.4}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.2.5}Unité organisationnelle et hiérarchie organisationnelle}{51}{subsection.3.2.5}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsubsection}{\numberline {III.2.5.1}Unité opérationnelle}{51}{subsubsection.3.2.5.1}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsubsection}{\numberline {III.2.5.2}Unité administrative}{52}{subsubsection.3.2.5.2}%
+\ttl@stoptoc {chapters@4}
+\contentsline {paragraph}{}{52}{subsubsection.3.2.5.2}%
+\contentsline {subsection}{\numberline {III.2.6}Structure organisationnelle}{52}{subsection.3.2.6}%
+\ttl@stoptoc {chapters@4}
+\contentsline {paragraph}{}{52}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {III.2.7}Contexte}{52}{subsection.3.2.7}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.2.8}Mode de traitement}{53}{subsection.3.2.8}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.2.9}Règles}{53}{subsection.3.2.9}%
+\ttl@stoptoc {chapters@4}
+\contentsline {paragraph}{}{54}{subsection.3.2.9}%
+\ttl@starttoc {chapters@4}
+\contentsline {section}{\numberline {III.3}Présentation des relations dans AHOr-BAC}{54}{section.3.3}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.3.1}Employé métier et Unité opérationnelle}{54}{subsection.3.3.1}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.3.2}Employé métier et Unité Administrative}{54}{subsection.3.3.2}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.3.3}Unité Administrative et Unité Opérationnelle}{55}{subsection.3.3.3}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.3.4}Unité Administrative et Unité Administrative}{55}{subsection.3.3.4}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.3.5}Les ressources et les vues}{56}{subsection.3.3.5}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.3.6}Les actions et les requêtes}{56}{subsection.3.3.6}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.3.7}La relation définit}{56}{subsection.3.3.7}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.3.8}Permissions}{56}{subsection.3.3.8}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.3.9}Les relations peut-suggérer et peut-traiter}{58}{subsection.3.3.9}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.3.10}Attribution des Règles aux Permissions de bas niveau}{59}{subsection.3.3.10}%
+\ttl@stoptoc {chapters@4}
+\ttl@starttoc {chapters@4}
+\contentsline {section}{\numberline {III.4}Algorithme du parapheur électronique}{60}{section.3.4}%
+\ttl@stoptoc {chapters@4}
+\contentsline {subsection}{\numberline {III.4.1}La phase d'initialisation du parapheur électronique}{61}{subsection.3.4.1}%
+\ttl@stoptoc {chapters@4}
+\contentsline {paragraph}{}{62}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {III.4.2}La phase d'émission d'une requête du parapheur électronique}{62}{subsection.3.4.2}%
+\ttl@stoptoc {chapters@4}
+\contentsline {paragraph}{}{62}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {III.4.3}La phase de traitement d'une requête du parapheur électronique}{63}{subsection.3.4.3}%
+\ttl@stoptoc {chapters@4}
+\contentsline {paragraph}{}{64}{subsection.3.4.3}%
+\contentsline {paragraph}{}{65}{subsection.3.4.3}%
+\contentsline {chapter}{Bibliography}{67}{chapter*.47}%
+\contentsfinish
