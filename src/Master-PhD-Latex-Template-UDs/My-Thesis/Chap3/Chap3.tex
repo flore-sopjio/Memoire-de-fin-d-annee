@@ -4,15 +4,24 @@
 
 \mySection{Introduction}{}\label{sectionIntroduction}
 
-Dans le chapitre précédent, nous avons présenté les différents modèles de contrôles d'accès y compris le modèle HOr-BAC. Le but de notre travail étant la proposition d'un modèle de contrôle d'accès basé sur la hiérarchie organisationnelle et les attributs. En effet, nous proposons une nouvelle couche fonctionnelle au dessus du modèle HOr-BAC afin de permettre une spécification flexible et sensible contexte. Nous allons dans ce chapitre, présenter notre Modèle. Nous commencerons dans un premier temps par présenter les concepts qui constituerons notre modèle. Ensuite nous présenterons les différentes relations qui existent entre ces différents concepts. Puis, nous continuerons par décrire les différents phases du parapheur électronique. En fin nous présenterons un cas pratique de notre approche.
+Dans le chapitre précédent, nous avons présenté les différents modèles de contrôles d'accès y compris le modèle HOr-BAC. Le but de notre travail étant la proposition d'un modèle de contrôle d'accès basé sur la hiérarchie organisationnelle et les attributs. Nous proposerons une nouvelle couche fonctionnelle au-dessus du modèle HOr-BAC afin de permettre une spécification flexible et sensible au contexte des politiques. Nous allons dans ce chapitre, présenter notre Modèle. Nous commencerons dans un premier temps par présenter les concepts qui constituerons notre modèle. Ensuite nous présenterons les différentes relations qui existent entre ces différents concepts. Puis, nous continuerons par décrire les différents phases du parapheur électronique. En fin nous présenterons un cas pratique de notre approche.
+
+\mySection{Motivation}{}\label{sectionMotivation}
+
+De tous les politiques et modèles de sécurité qui existent dans la littérature (et que nous avons décrits dans le chapitre précèdent), seul les politiques basées sur la hiérarchie organisationnelle permettent de spécifier les règles qui d'une part, assurent le contrôle des opérations effectuées par le super-utilisateur au sein du système d'information, puis représentent la relation hiérarchique qui existe entre les unités de traitement administratives et opérationnelles et en fin empêchent la création d'entités virtuelles dans le système d'information de l'organisation. Cependant, HOr-BAC ce modèle ne permet pas le points suivants:
+\begin{itemize}
+\item une spécification flexible des politiques de sécurité;
+\item un contrôle à grain fin des ressources protégées du système.
+\end{itemize} 
+\hspace*{0.5cm} La section suivante présente un ensemble de concepts permettant de spécifier un modèle de sécurité capable de prendre en compte ces différents points.
 
 \mySection{Concepts de base du modèle AHOr-BAC}{}\label{sectionConcept}
 
 \mySubSection{Organisation}{}\label{sectionOrganisation} 
-Une organisation est un ensemble d'individus, regroupés au sein d'une structure régulée, ayant un système de communication pour faciliter la circulation de l'information, dans le but de répondre à des besoins et d'atteindre des objectifs déterminés. Elle est représenté dans notre modèle par l'entité \textit{Organisation}
+Une organisation est un ensemble d'individus, regroupés au sein d'une structure régu-lée, ayant un système de communication pour faciliter la circulation de l'information, dans le but de répondre à des besoins et d'atteindre des objectifs déterminés. Elle est représenté dans notre modèle par l'entité \textit{Organisation}
 
 \mySubSection{Employé Métier}{}\label{sectionEmployeMetier} 
-Il représente une personne physiquement identifiable ayant un rôle actif dans l'organisation. C'est la seule entité réellement active dans l'organisation. Tout comme dans HOr-BAC, ce concept permet d'empêcher la création des entités virtuelles dans le système d'information par le super-utilisateur. Car, si l'utilisateur est une personne physique, il pourra être facilement contrôlé. les employé métier peuvent avoir un ou plusieurs attributs, et chaque attribut peut avoir une ou plusieurs valeurs d'attributs qui sont représentés par les entités \textit{AttributE} et \textit{valeurAttributE} respectivement. Dans notre modèle, on attribue une ou plusieurs valeurs d'attributs d'employés à chaque Employé métier. Ce qui est représenté par la relation suivante: %\textit{Useruavassignment} \subseteq \textit{Users} \times \textit{Userattributevalues}
+Il représente une personne physiquement identifiable ayant un rôle actif dans l'organi-sation. C'est la seule entité réellement active dans l'organisation. Tout comme dans HOr-BAC, ce concept permet d'empêcher la création des entités virtuelles dans le système d'information par le super-utilisateur. Car, si l'utilisateur est une personne physique, il pourra être facilement contrôlé. les employé métier peuvent avoir un ou plusieurs attributs, et chaque attribut peut avoir une ou plusieurs valeurs d'attributs qui sont représentés par les entités \textit{AttributE} et \textit{valeurAttributE} respectivement. Dans notre modèle, on attribue une ou plusieurs valeurs d'attributs d'employés à chaque Employé métier. Ce qui est représenté par la relation suivante: %\textit{Useruavassignment} \subseteq \textit{Users} \times \textit{Userattributevalues}
 
 \begin{figure}[h!]
     \centering
@@ -44,13 +53,13 @@ Dans HOr-BAC, une unité organisationnelle est définie comme étant le regroupe
 \mySubSubSection{Unité opérationnelle}{}\label{sectionUnitéOpérationnelle}
 Elle représente l'ensemble des employés métiers ayant les mêmes formations, les mêmes rôles et une fonction spécifique dans une organisation. Elle ne prend aucune décision sur le fonctionnement de l'organisation et ne fait qu'obéit aux décisions qui lui ont été données par l'unité administrative qui la subordonne. Exemple : comptabilité, enseignant. 
 \mySubSubSection{Unité administrative}{}\label{sectionUnitéAdministrative}
-Elle représente l'ensemble des unités décisionnelles de l'organisation. Cette entité permet de représenter les fonctions de contrôle, de supervision, et de validation des requêtes émises dans le SI. Elle peut être placée sur une unité opérationnelle ou sur une autre unité administrative. Exemple : département, rectorat et décanat dans une université.
-\paragraph{}Grâce à la structure organisationnelle d'une organisation, il est possible de dégager l'ordre hiérarchique entre deux unités organisationnelle.
+Elle représente l'ensemble des unités décisionnelles de l'organisation. Cette entité permet de représenter les fonctions de contrôle, de supervision, et de validation des requêtes émises dans le SI. Elle peut être placée sur une unité opérationnelle ou sur une autre unité administrative. Exemple : département, rectorat et décanat dans une université.\\
+\hspace*{0.5cm} Grâce à la structure organisationnelle d'une organisation, il est possible de dégager l'ordre hiérarchique entre deux unités organisationnelle.
 
 \mySubSection{Structure organisationnelle}{}\label{sectionStructureOrg}
 
-La structure organisationnelle est définie comme étant la représentation schématique des liens hiérarchiques et fonctionnels d'une entreprise ou d'une organisation. Elle permet de préciser les niveaux de responsabilités et le mode de communication interne à l'organisation. Pour pouvoir contrôler les différentes opérations des utilisateurs du système d'information dans une organisation, nous allons ressortir la structure organisationnelle hiérarchique de cette dernière.
-\paragraph{} En effet, nous représentons cette structure hiérarchique par un arbre comportant les nœuds et les feuilles signifiant respectivement les unités administratives et les unités opérationnelles de l'organisation. Une unité opérationnelle se représente sous la forme UO1,P où 1 représente le premier niveau et p représente la p-ième unité opérationnelle. Par ailleurs, une unité administrative est représentée sous la forme UAn,p où n est le niveau hiérarchique et p la p-ième unité administrative. La figure 2.10 présente une structure organisationnelle à 5 niveaux hiérarchiques.
+La structure organisationnelle est définie comme étant la représentation schématique des liens hiérarchiques et fonctionnels d'une entreprise ou d'une organisation. Elle permet de préciser les niveaux de responsabilités et le mode de communication interne à l'organisation. Pour pouvoir contrôler les différentes opérations des utilisateurs du système d'information dans une organisation, nous allons ressortir la structure organisationnelle hiérarchique de cette dernière.\\
+\hspace*{0.5cm} En effet, nous représentons cette structure hiérarchique par un arbre comportant les nœuds et les feuilles signifiant respectivement les unités administratives et les unités opérationnelles de l'organisation. Une unité opérationnelle se représente sous la forme UO1,P où 1 représente le premier niveau et p représente la p-ième unité opérationnelle. Par ailleurs, une unité administrative est représentée sous la forme UAn,p où n est le niveau hiérarchique et p la p-ième unité administrative. La figure \ref{figstructure} présente une structure organisationnelle à 5 niveaux hiérarchiques.
 
 \begin{figure}[h!]
     \centering
@@ -61,7 +70,7 @@ La structure organisationnelle est définie comme étant la représentation sch�
 
 \mySubSection{Contexte}{}\label{sectionContexte}
 
-Dans notre modèle, le \textit{contexte} définie une situation ou des circonstances dans lesquelles les organisations accordent des permissions à des rôles pour réaliser des requêtes sur des vues. Il est indépendant des employés métiers et des ressources. Tout comme l'employé métier et la ressource, un contexte peut avoir un ou plusieurs attributs. ces attributs permettent d'exprimer des contraintes relatives aux unités organisationnelles, aux ressources, et aux employés métiers. Chaque attribut peut avoir une ou plusieurs valeurs d'attribut de contexte qui sont représentés par les entités \textit{AttributC} et \textit{valeurAttributC} respectivement. Dans notre modèle, on associe une ou plusieurs valeurs d'attribut de contexte à chaque contexte. Ce qui est capturé par la relation suivante:
+Dans notre modèle, le \textit{contexte} définie une situation ou des circonstances dans les-quelles les organisations accordent des permissions à des rôles pour réaliser des requêtes sur des vues. Il est indépendant des employés métiers et des ressources. Tout comme l'employé métier et la ressource, un contexte peut avoir un ou plusieurs attributs. ces attributs permettent d'exprimer des contraintes relatives aux unités organisationnelles, aux ressources, et aux employés métiers. Chaque attribut peut avoir une ou plusieurs valeurs d'attribut de contexte qui sont représentés par les entités \textit{AttributC} et \textit{valeurAttributC} respectivement. Dans notre modèle, on associe une ou plusieurs valeurs d'attribut de contexte à chaque contexte. Ce qui est capturé par la relation de la figure \ref{figcontexte}
 
 \begin{figure}[h!]
     \centering
@@ -76,8 +85,8 @@ Tout comme dans HOr-BAC, l'entité \textit{Mode de traitement} dans notre modèl
 
 \mySubSection{Règles}{}\label{sectionRègle}
 
-Afin de permettre le contrôle des politiques de sécurité en fonction des attributs, nous introduisons dans notre modèle l'entité \textit{Règle}. Une règle permet d'activer ou de déactiver les permissions de bas niveau. C'est-à-dire liées aux actions concrètes que réalise les employés métiers sur des ressources. 
-\paragraph{} Dans AHOr-BAC, les règles qui restreignent la disponibilité des permissions pour les employés métiers peuvent être composées des valeurs d'attributs d'employé, des valeurs d'attribut de contexte et/ou des valeurs d'attribut de ressource.
+Afin de permettre le contrôle des politiques de sécurité en fonction des attributs, nous introduisons dans notre modèle l'entité \textit{Règle}. Une règle permet d'activer ou de déactiver les permissions de bas niveau. C'est-à-dire liées aux actions concrètes que réalise les employés métiers sur des ressources. \\
+\hspace*{0.5cm} Dans AHOr-BAC, les règles qui restreignent la disponibilité des permissions pour les employés métiers peuvent être composées des valeurs d'attributs d'employé, des valeurs d'attribut de contexte et/ou des valeurs d'attribut de ressource.
 
 \mySection{Présentation des relations dans AHOr-BAC}{}\label{sectionRelation} 
 
@@ -125,7 +134,7 @@ La relation entre les unité administratives est matérialiser dans  notre modè
 	 \label{figsubordonne}
 \end{figure} 
 
-\mySubSection{Les ressources et les vues}{}\label{sectionRessourceetVue}
+\mySubSection{Ressources et Vues}{}\label{sectionRessourceetVue}
 
 La relation entre les unité administratives est matérialiser dans  notre modèle par la relation \textit{Utilise}. En effet, une même ressource peut être considérée de différentes manières dans une organisation en fonction des unités organisationnelles à partir desquelles cette ressource est vue. Une vue est un regroupement de ressources sur lesquelles on applique les mêmes politiques de sécurité. Suivant les organisations une même vue peut être définir différemment. Ainsi utilise permet de matérialiser le fait qu'une organisation utilise une ressource dans une vue.
 
@@ -136,7 +145,7 @@ La relation entre les unité administratives est matérialiser dans  notre modè
 	 \label{figutilise}
 \end{figure} 
 
-\mySubSection{Les actions et les requêtes}{}\label{sectionActionRequêtes}
+\mySubSection{Actions et Requêtes}{}\label{sectionActionRequêtes}
 
 La relation entre les unité administratives est matérialiser dans  notre modèle par la relation \textit{Considère}. En effet, les politiques de sécurité spécifient les accès aux ressources par les unités organisationnelles et régulent les actions opérées sur le système. Dans notre modèle, l'entité Action englobe principalement les actions informatiques comme "lire", "écrire", "envoyer". Et l'entité Requête englobe principalement les demandes comme "consulter", "modifier", "transmettre", "ajouter", "supprimer". Considère permet de représenter le fait qu'une  organisation considère une action comme faisant partie d'une requête.
 
@@ -160,9 +169,11 @@ La relation entre les unité administratives est matérialiser dans  notre modè
 
 \mySubSection{Permissions}{}\label{sectionPermission}
 
-Une permission matérialise le fait qu'une organisation autorise une unité organisationnelle de traiter ou d'émettre une requête donnée dans une vue donnée selon un contexte précis et un mode de traitement bien définie. De ce fait, nous distinguons deux types de permissions qui sont:\\
-- les permissions dites de préparation: encore appelées permissions opérationnelles. Elles permettent aux unités opérationnelles de préparer (initier, émettre ou soumettre.) des requêtes à leurs hiérarchie. Elles sont matérialisées par la relation permission-opérationnelle qui relie les entités organisation, unité opérationnelle, requête, vue, contexte et mode de traitement. Cette relation est représentée à la figure \ref{figpermissionO}.\\
-- les permissions dites de validation: encore appelées permissions administratives, elles permettent aux unités administratives de traiter (contrôler, rejeter, valider et/ou transmettre) les requêtes  provenant dans unités opérationnelles. Elles sont matérialisées par la relation permission-administrative qui permet de relier les entités organisation, unité opérationnelle, unité administrative, requête, vue, contexte et mode de traitement. Cette relation est représentée à la figure \ref{figpermissionA};
+Une permission matérialise le fait qu'une organisation autorise une unité organisationnelle de traiter ou d'émettre une requête donnée dans une vue donnée selon un contexte précis et un mode de traitement bien définie. De ce fait, nous distinguons deux types de permissions qui sont:
+\begin{itemize}
+\item \textbf{Les permissions dites de préparation:} encore appelées permissions opérationnelles. Elles permettent aux unités opérationnelles de préparer (initier, émettre ou soumettre.) des requêtes à leurs hiérarchie. Elles sont matérialisées par la relation permission-opérationnelle qui relie les entités organisation, unité opérationnelle, requête, vue, contexte et mode de traitement. Cette relation est représentée à la figure \ref{figpermissionO};
+\item \textbf{Les permissions dites de validation:} encore appelées permissions administratives, elles permettent aux unités administratives de traiter (contrôler, rejeter, valider et/ou transmettre) les requêtes  provenant dans unités opérationnelles. Elles sont matérialisées par la relation permission-administrative qui permet de relier les entités organisation, unité opérationnelle, unité administrative, requête, vue, contexte et mode de traitement. Cette relation est représentée à la figure \ref{figpermissionA}.
+\end{itemize}
 
 \begin{figure}[h!]
     \centering
@@ -178,11 +189,16 @@ Une permission matérialise le fait qu'une organisation autorise une unité orga
 	 \label{figpermissionA}
 \end{figure} 
 
-\mySubSection{Les relations peut-suggérer et peut-traiter}{}\label{sectionSuggererTraiter}
+\mySubSection{Peut-suggérer et peut-traiter}{}\label{sectionSuggererTraiter}
 
-Les permissions vues plus haut ne permettent qu'à une organisation donnée de spécifier les permissions accordées aux unités organisationnelles suivant un contexte précis. Mais ne permettent pas de décrire des actions concrètes que réalisent les employés sur les ressources. Ainsi nous avons implémentés le concept de contrôle d'accès de bas niveau à travers les relations suivantes : \\
-- \textit{Peut-suggérer} : cette relation permet à un employé d'obtenir la permission de suggérer l'application d'une action sur une ressource donnée. Cette relation est représentée à la figure \ref{figpeut-suggerer}.\\
-- \textit{Peut-traiter} : cette relation matérialise le fait que le supérieur hiérarchique d'un employé a l'autorisation de traiter les suggestions d'application d'une action donnée sur une ressource donnée. Cette relation est représentée à la figure \ref{figpeut-traiter}.
+Les permissions vues plus haut ne permettent qu'à une organisation donnée de spécifier les permissions accordées aux unités organisationnelles suivant un contexte précis. Mais ne permettent pas de décrire des actions concrètes que réalisent les employés sur les ressources. Ainsi nous avons implémentés le concept de contrôle d'accès de bas niveau à travers les relations suivantes : 
+
+\begin{itemize}
+
+\item \textbf{\textit{Peut-suggérer}} : cette relation permet à un employé d'obtenir la permission de suggérer l'application d'une action sur une ressource donnée. Cette relation est représentée à la figure \ref{figpeut-suggerer};
+\item \textbf{\textit{Peut-traiter}} : cette relation matérialise le fait que le supérieur hiérarchique d'un employé a l'autorisation de traiter les suggestions d'application d'une action donnée sur une ressource donnée. Cette relation est représentée à la figure \ref{figpeut-traiter}.
+
+\end{itemize}
 
 \begin{figure}[h!]
     \centering
@@ -207,14 +223,14 @@ Dans notre modèle, une règle peut être assignée à plusieurs permissions, et
 
 \begin{figure}[h!]
     \centering
-		\includegraphics[scale=0.6]{chap3/images/regle-peutsuggerer.png}
+		\includegraphics[scale=0.5]{chap3/images/regle-peutsuggerer.png}
     \caption{Affectation des règles aux permissions de bas niveaux 1}
 	 \label{figregle-peutsuggerer}
 \end{figure} 
 
 \begin{figure}[h!]
     \centering
-		\includegraphics[scale=0.6]{chap3/images/reglePeutTraiter.png}
+		\includegraphics[scale=0.5]{chap3/images/reglePeutTraiter.png}
     \caption{Affectation des règles aux permissions de bas niveaux 2}
 	 \label{figreglePeutTraiter}
 \end{figure} 
@@ -225,36 +241,30 @@ Tout comme HOr-BAC, nous introduisons dans notre modèle la notion de parapheur 
 \mySubSection{La phase d'initialisation du parapheur électronique}{}\label{sectionPhaseInitialisation}
 
 Cette phase permet la création des différentes entités du modèle HOr-BAC y compris les différentes relations qui existent entre elles. Elle est réalisée à travers six processus que sont :
-
-\myDescription{\textit{Créer-org}}{Cette procédure crée la structure organisationnelle dans un
-arbre et retourne la racine qui est la plus grande unité administrative de l'organisation ;}
-
-\myDescription{\textit{Créer-emp}}{Cette procédure prend la liste du personnel et affecte chacun à une unité organisationnelle en utilisant la relation \textit{Emploie} et \textit{Nomme};}
-
-\myDescription{\textit{Créer-vue}}{Elle prend la liste des ressources et crée les différentes vues de l'organisation, en utilisant la relation \textit{Utilise} ;}
-
-\myDescription{\textit{Créer-requête}}{Elle prend la liste des actions et crée les différentes requêtes de l'organisation, en utilisant la relation \textit{Considère} ;}
-
-\myDescription{\textit{Créer-mode-traitement}}{Cette procédure crée les différents modes de traitement utilisés dans l'organisation ;}
-
-\myDescription{\textit{Créer-permission}}{Elle associe à chaque unité organisationnelle les Permissions
-opérationnelles ou les Permissions administratives suivant les cas, et donne les permissions opérationnelles aux employés métier et nomme les administrateurs;}
-
-\paragraph{} Contrairement à HOr-BAC, dans notre modèle nous définissons à ce niveau un nouveau processus qui nous permettra d'associer un ensemble de règles basées sur les attributs afin de permettre un contrôle de bas niveau et à grain fin des ressources.
+\begin{itemize}
+\item \textit{Créer-org} Cette procédure crée la structure organisationnelle dans un arbre et retourne la racine qui est la plus grande unité administrative de l'organisation ;
+\item \textit{Créer-emp} Cette procédure prend la liste du personnel et affecte chacun à une unité organisationnelle en utilisant la relation \textit{Emploie} et \textit{Nomme};
+\item \textit{Créer-vue} Elle prend la liste des ressources et crée les différentes vues de l'organi-sation, en utilisant la relation \textit{Utilise};
+\item \textit{Créer-requête} Elle prend la liste des actions et crée les différentes requêtes de l'organisation, en utilisant la relation \textit{Considère};
+\item \textit{Créer-mode-traitement} Cette procédure crée les différents modes de traitement utilisés dans l'organisation;
+\item \textit{Créer-permission} Elle associe à chaque unité organisationnelle les Permissions
+opé-rationnelles ou les Permissions administratives suivant les cas, et donne les permissions opérationnelles aux employés métier et nomme les administrateurs.
+\hspace*{0.5cm} Contrairement à HOr-BAC, dans notre modèle nous définissons à ce niveau un nouveau processus qui nous permettra d'associer un ensemble de règles basées sur les attributs afin de permettre un contrôle de bas niveau et à grain fin des ressources.
+\item \textit{Créer-règle-permission-bas-niveau} Elle associe à chaque permission de bas niveau un ensemble de règles en utilisant la relation \textit{attribuer}.
+\end{itemize}
   
 %\myDescription{\textit{Créer-règle-unité-organisationnelle}}{Elle associe à chaque unité organisation un ensemble de règles en utilisant la relation \textit{attribuer} }
-
-\myDescription{\textit{Créer-règle-permission-bas-niveau}}{Elle associe à chaque permission de bas niveau un ensemble de règles en utilisant la relation \textit{attribuer} }
 
 \mySubSection{La phase d'émission d'une requête du parapheur électronique}{}\label{sectionPhaseEmission}
 
 
-Cette phase est déclenché lorsqu'un employé qui veut effectuer une action sur une ressource protégée du système émet par le biais de son unité opérationnelle une requête demandant l'accès à une vue du système. Tout comme dans HOr-BAC, cette phase du parapheur électronique, dans notre modèle permet d'effectuer un contrôle de bas niveau des ressources auxquelles on souhaite y accéder. C'est-à-dire qu'on aimerait savoir si un employé métier peut oui ou non effectuer une action sur une ressource ou tout simplement signaler à son supérieur hiérarchique qu'il aimerait effectuer une action données sur les ressources protégées du système. La particularité de notre modèle réside dans le fait que, cette phase ne se base pas simplement sur les permissions opérationnelles pour accorder l'accès aux ressources du système, mais aussi sur des règles qui permettent un contrôle à grain fin des ressources. Ces règles comme nous l'avons spécifier plus haut sont une combinaison des valeurs d'attribut d'employé métier, des valeurs d'attribut de ressource et/ou des valeurs d'attribut de contexte. 
-
-\paragraph{} Cette phase est capturée par un algorithme qui prend en entrée l'employé métier qui émet une requête, la requête, l'action, la vue, le contexte,le mode de traitement de la requête et un fichier contenant l'ensemble des règles d'accès. Lors de l'émission d'une requête, notre algorithme se charge de vérifier l'identité de l'émetteur de la requête. Après confirmation de l'identité de ce dernier, notre algorithme récupère l'unité opérationnelle qui émet la requête, vérifie si cette unité à une permission opérationnelle qui lui permet de réaliser la requête sur une vue donnée dans un contexte précis et selon un mode de traite de la requête défini. Si l'unité opérationnelle ne possède pas de permission alors l'accès à la ressource est refusé. Sinon, on récupère l'employé et on vérifie s'il est employé dans cette unité opérationnelle par l'organisation; si oui, on récupère la ressource de la demande dans la politique de sécurité et vérifie si celle-ci est utilisée comme vue dans l'organisation. Si cette vérification n'est pas correcte, la requête n'aboutit pas ; sinon ce processus récupère l'action de la demande dans la table action et contrôle si elle est considérée comme la requête q au sein de l'organisation. Dans le cas où il y a échec du contrôle, la demande est non valide ; dans le cas contraire, le processus continue ses vérifications en récupérant le contexte de la demande dans la politique de sécurité située dans la base de données de l'organisation et vérifie si l'émetteur a la permission de proposer une application de l'action a sur la ressource r dans le contexte c au sein de l'organisation. La demande échoue si celui-ci n'a pas cette permission et le processus d'émission continu ses vérifications. Si cette permission
-lui est définie, l'algorithme récupère le fichier XML qui contient les règles basée sur les attributs d'employé métier, de ressource et de contexte qui est stocké dans la base de donnée et vérifie si au plus une règle permet d'activer la permission qui donne le droit à l'employé d'effectuer une action donnée sur une ressource. Si aucune règle n'est remplit, la demande est annulée. Sinon l'algorithme récupère le mode de traitement dans la base de données. A cet effet, il existe deux modes de traitement d'une requête à savoir : les modes de traitement temps réel et temps diffère.\\
-— Lorsque le mode de traitement est temps réel, la demande de l'émetteur n'est pas contrôlée par une unité administrative. Par conséquent le processus d'émission du parapheur électronique enregistre cette requête dans la base de données de l'organisation. Ainsi la requête préalablement émise par l'émetteur est finalement validée.\\
-— Lorsque le mode de traitement est temps différé, la demande émise par l'émetteur doit être automatiquement validée par au moins une unité administrative de la structure organisationnelle. Alors le processus donne la possibilité à l'employé de faire une suggestion à son supérieur hiérarchique. puis la requête sera sauvegardée dans la base de donnée et une alerte sera envoyée a l'un des supérieur hiérarchique de ce dernier.
+Cette phase est déclenché lorsqu'un employé qui veut effectuer une action sur une ressource protégée du système émet par le biais de son unité opérationnelle une requête demandant l'accès à une vue du système. Tout comme dans HOr-BAC, cette phase du parapheur électronique, dans notre modèle permet d'effectuer un contrôle de bas niveau des ressources auxquelles on souhaite y accéder. C'est-à-dire qu'on aimerait savoir si un employé métier peut oui ou non effectuer une action sur une ressource ou tout simplement signaler à son supérieur hiérarchique qu'il aimerait effectuer une action données sur les ressources protégées du système. La particularité de notre modèle réside dans le fait que, cette phase ne se base pas simplement sur les permissions opérationnelles pour accorder l'accès aux ressources du système, mais aussi sur des règles qui permettent un contrôle à grain fin des ressources. Ces règles comme nous l'avons spécifier plus haut sont une combinaison des valeurs d'attribut d'employé métier, des valeurs d'attribut de ressource et/ou des valeurs d'attribut de contexte. \\
+\hspace*{0.5cm} Cette phase est capturée par un algorithme qui prend en entrée l'employé métier qui émet une requête, la requête, l'action, la vue, le contexte,le mode de traitement de la requête et un fichier contenant l'ensemble des règles d'accès. Lors de l'émission d'une requête, notre algorithme se charge de vérifier l'identité de l'émetteur de la requête. Après confirmation de l'identité de ce dernier, notre algorithme récupère l'unité opérationnelle qui émet la requête, vérifie si cette unité à une permission opérationnelle qui lui permet de réaliser la requête sur une vue donnée dans un contexte précis et selon un mode de traite de la requête défini. Si l'unité opérationnelle ne possède pas de permission alors l'accès à la ressource est refusé. Sinon, on récupère l'employé et on vérifie s'il est employé dans cette unité opérationnelle par l'organisation; si oui, on récupère la ressource de la demande dans la politique de sécurité et vérifie si celle-ci est utilisée comme vue dans l'organisation. Si cette vérification n'est pas correcte, la requête n'aboutit pas ; sinon ce processus récupère l'action de la demande dans la table action et contrôle si elle est considérée comme la requête q au sein de l'organisation. Dans le cas où il y a échec du contrôle, la demande est non valide ; dans le cas contraire, le processus continue ses vérifications en récupérant le contexte de la demande dans la politique de sécurité située dans la base de données de l'organisation et vérifie si l'émetteur a la permission de proposer une application de l'action a sur la ressource r dans le contexte c au sein de l'organisation. La demande échoue si celui-ci n'a pas cette permission et le processus d'émission continu ses vérifications. Si cette permission
+lui est définie, l'algorithme récupère le fichier XML qui contient les règles basée sur les attributs d'employé métier, de ressource et de contexte qui est stocké dans la base de donnée et vérifie si au plus une règle permet d'activer la permission qui donne le droit à l'employé d'effectuer une action donnée sur une ressource. Si aucune règle n'est remplit, la demande est annulée. Sinon l'algorithme récupère le mode de traitement dans la base de données. A cet effet, il existe deux modes de traitement d'une requête à savoir : les modes de traitement temps réel et temps diffère.
+\begin{itemize}
+\item Lorsque le mode de traitement est temps réel, la demande de l'émetteur n'est pas contrôlée par une unité administrative. Par conséquent le processus d'émission du parapheur électronique enregistre cette requête dans la base de données de l'organisa-tion. Ainsi la requête préalablement émise par l'émetteur est finalement validée;
+\item Lorsque le mode de traitement est temps différé, la demande émise par l'émetteur doit être automatiquement validée par au moins une unité administrative de la structure organisationnelle. Alors le processus donne la possibilité à l'employé de faire une suggestion à son supérieur hiérarchique. puis la requête sera sauvegardée dans la base de donnée et une alerte sera envoyée a l'un des supérieur hiérarchique de ce dernier.
+\end{itemize}
 
 \begin{figure}[h!]
     \centering
@@ -263,13 +273,13 @@ lui est définie, l'algorithme récupère le fichier XML qui contient les règle
 	 \label{figemission}
 \end{figure} 
 
+
+
 \mySubSection{La phase de traitement d'une requête du parapheur électronique}{}\label{sectionPhasetraitement}
 
-Cette phase est déclenché lorsque le supérieur hiérarchique d'un employé métier reçoit une alerte du système lui indiquant qu'une requête vient d'être soumis par ce dernier et qu'elle attend d'être traiter par lui afin d'accorder ou pas l'accès aux ressources protégées du système. Tout comme dans HOr-BAC, cette phase du parapheur électronique, dans notre modèle permet d'effectuer un contrôle de bas niveau des ressources auxquelles on souhaite y accéder. C'est-à-dire qu'on aimerait savoir si le supérieur hiérarchique d'un employé peut ou ne peut pas autoriser à ce dernier d'effectuer une action sur une ressource ou tout simplement transmettre cette requête à une autorité au dessus de la sienne pour qu'elle valide ou refuse l'exécution de la requête par l'employé. La particularité de notre modèle réside dans le fait que, cette phase ne se base pas simplement sur les permissions administratives pour accorder l'accès aux ressources du système, mais aussi sur des règles basées sur des attributs qui permettent un contrôle à grain fin des ressources. 
-
-\paragraph{} Cette phase est capturée par un algorithme qui prend en entrée l'employé métier qui est chargé de traiter la requête, la requête, l'action, la vue, le contexte,le mode de traitement de la requête et un fichier contenant l'ensemble des règles d'accès. Lors du traitement d'une requête, notre algorithme se charge de vérifier l'identité de l'employé qui est chargé du traitement de la requête. Après confirmation de l'identité de ce dernier, notre algorithme récupère tout d'abord l'unité administrative de cet employé puis l'unité opérationnelle qui émet la requête, et vérifie si cette unité à une permission administrative qui lui permet d'autoriser à l'unité organisationnelle de l'employé qui à émit la requête de réaliser la requête sur une vue donnée dans un contexte précis et selon un mode de traite de la requête défini. Si l'unité administrative ne possède pas de permission alors la demande est rejetée. Sinon, le processus de vérification peut continuer. Alors on récupère le supérieur hiérarchique chargé du traitement de la requête et l'émetteur de la requête et on vérifie si dans l'organisation ce dernier est le chef de l'employé qui a émit la requête. Si tel n'est pas le cas, il y a échec de la requête; sinon le processus vérifie si l'employé (supérieur hiérarchique) est nommé en tant qu'une unité administrative dans l'organisation. Dès que cette vérification est invalide, il y a échec de la requête ; dans le cas contraire, ce processus continue son exécution en récupérant la ressource de la requête dans la base de données et contrôle si cette ressource est utilisée comme vue au sein de l'organisation ; si tel est le cas, le processus récupère l'action dans la base de données et teste si cette dernière est considérée comme la requête dans l'organisation. Si tel n'est pas le cas la demande échoue.
-
-\paragraph{} Dans le cas contraire, il récupère le contexte de l'unité administrative autorisée à valider la requête dans la table contexte et vérifie si dans cette organisation, cette unité est autorisée à valider la requête demandant d'effectuer l'action a sur la ressource r, dans le contexte émise par l'émetteur de la requête. Si c'est le cas, l'algorithme récupère le fichier XML qui contient les règles basée sur les attributs d'employé métier, de ressource et de contexte qui est stocké dans la base de donnée et vérifie si au plus une règle permet d'activer la permission qui donne le droit à l'employé de validé ou de refusé l'exécution de la requête. Si aucune règle n'est remplit, la demande est annulée. Dans le cas contraire, il teste si la hauteur du destinataire de la requête ou la hauteur du supérieur hiérarchique qui traite la demande est égale à la profondeur de l'émetteur de la requête et vérifie si le mode de traitement du supérieur hiérarchique est en temps réel, la vérification étant correcte, ce dernier donne son avis qui peut être une validation ou un refus. Dans le cas où il y a acceptation, le processus effectue l'action demandée sur la ressource dans la base de données. Dans le cas où cet avis est un refus, il y a échec de la demande. Si son mode de traitement est temps différé, le processus recherche le prochain supérieur hiérarchique qui doit donner son accord sur la demande et recommence son exécution.
+Cette phase est déclenché lorsque le supérieur hiérarchique d'un employé métier reçoit une alerte du système lui indiquant qu'une requête vient d'être soumis par ce dernier et qu'elle attend d'être traiter par lui afin d'accorder ou pas l'accès aux ressources protégées du système. Tout comme dans HOr-BAC, cette phase du parapheur électronique, dans notre modèle permet d'effectuer un contrôle de bas niveau des ressources auxquelles on souhaite y accéder. C'est-à-dire qu'on aimerait savoir si le supérieur hiérarchique d'un employé peut ou ne peut pas autoriser à ce dernier d'effectuer une action sur une ressource ou tout simplement transmettre cette requête à une autorité au dessus de la sienne pour qu'elle valide ou refuse l'exécution de la requête par l'employé. La particularité de notre modèle réside dans le fait que, cette phase ne se base pas simplement sur les permissions administratives pour accorder l'accès aux ressources du système, mais aussi sur des règles basées sur des attributs qui permettent un contrôle à grain fin des ressources.\\
+\hspace*{0.5cm} Cette phase est capturée par un algorithme qui prend en entrée l'employé métier qui est chargé de traiter la requête, la requête, l'action, la vue, le contexte,le mode de traitement de la requête et un fichier contenant l'ensemble des règles d'accès. Lors du traitement d'une requête, notre algorithme se charge de vérifier l'identité de l'employé qui est chargé du traitement de la requête. Après confirmation de l'identité de ce dernier, notre algorithme récupère tout d'abord l'unité administrative de cet employé puis l'unité opérationnelle qui émet la requête, et vérifie si cette unité à une permission administrative qui lui permet d'autoriser à l'unité organisationnelle de l'employé qui à émit la requête de réaliser la requête sur une vue donnée dans un contexte précis et selon un mode de traite de la requête défini. Si l'unité administrative ne possède pas de permission alors la demande est rejetée. Sinon, le processus de vérification peut continuer. Alors on récupère le supérieur hiérarchique chargé du traitement de la requête et l'émetteur de la requête et on vérifie si dans l'organisation ce dernier est le chef de l'employé qui a émit la requête. Si tel n'est pas le cas, il y a échec de la requête; sinon le processus vérifie si l'employé (supérieur hiérarchique) est nommé en tant qu'une unité administrative dans l'organisation. Dès que cette vérification est invalide, il y a échec de la requête ; dans le cas contraire, ce processus continue son exécution en récupérant la ressource de la requête dans la base de données et contrôle si cette ressource est utilisée comme vue au sein de l'organisation ; si tel est le cas, le processus récupère l'action dans la base de données et teste si cette dernière est considérée comme la requête dans l'organisation. Si tel n'est pas le cas la demande échoue.\\
+\hspace*{0.5cm} Dans le cas contraire, il récupère le contexte de l'unité administrative autorisée à valider la requête dans la table contexte et vérifie si dans cette organisation, cette unité est autorisée à valider la requête demandant d'effectuer l'action a sur la ressource r, dans le contexte émise par l'émetteur de la requête. Si c'est le cas, l'algorithme récupère le fichier XML qui contient les règles basée sur les attributs d'employé métier, de ressource et de contexte qui est stocké dans la base de donnée et vérifie si au plus une règle permet d'activer la permission qui donne le droit à l'employé de validé ou de refusé l'exécution de la requête. Si aucune règle n'est remplit, la demande est annulée. Dans le cas contraire, il teste si la hauteur du destinataire de la requête ou la hauteur du supérieur hiérarchique qui traite la demande est égale à la profondeur de l'émetteur de la requête et vérifie si le mode de traitement du supérieur hiérarchique est en temps réel, la vérification étant correcte, ce dernier donne son avis qui peut être une validation ou un refus. Dans le cas où il y a acceptation, le processus effectue l'action demandée sur la ressource dans la base de données. Dans le cas où cet avis est un refus, il y a échec de la demande. Si son mode de traitement est temps différé, le processus recherche le prochain supérieur hiérarchique qui doit donner son accord sur la demande et recommence son exécution.
 
 \begin{figure}[h!]
     \centering
@@ -278,6 +288,8 @@ Cette phase est déclenché lorsque le supérieur hiérarchique d'un employé m�
 	 \label{figtraitement}
 \end{figure} 
 
+\mySection{Conclusion}{}\label{sectionConclusion}
+En somme, dans ce chapitre, il était question pour nous de proposer un modèle de contrôle d'accès basé sur la hiérarchie organisationnelle et les attributs. Notre modèle permet un contrôle fin des ressources protégées du système, permet de spécifier des politiques flexibles et sensibles au contexte et permet également une migration facile des politiques basé sur la hiérarchie organisationnelle. dans le chapitre qui suit, il sera question pour nous de proposer un langage permettant de spécifier les politiques de notre modèle de contrôle d'accès.
 %\paragraph{} Afin de mieux comprendre le fonctionnement de ces deux algorithmes prenons l'exemple de l'université de dschang. Nous aimerons représenter la politique de sécurité suivante : seul les enseignants de mathématiques peuvent modifier 
 
 %\mySubSection{Étude de cas: spécification d'une politique de sécurité avec AHOr-BAC}{}\label{sectionExemple}

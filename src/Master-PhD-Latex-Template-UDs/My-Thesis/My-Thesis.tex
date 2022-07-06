@@ -49,10 +49,10 @@
 	% G�n�ration de la table des mati�res (avec "Table of Contents" comme titre), de la liste des symboles, de la liste des acronymes, de la liste des tableaux et de la liste des figures
 	% Des alternatives � ces commandes sont dispos: il suffit juste d'ajouter le suffixe "Star" pour ne pas les mettre dans la table de mati�re
 	\myTableOfContents{Table de matières}
-	\myListOfSymbols{}
-	\myListOfAcronyms{}
-	\myListOfTables{}
-	\myListOfFigures{}
+	%\myListOfSymbols{}
+	\myListOfAcronyms{Liste des acronymes}
+	%\myListOfTables{Liste des tableaux}
+	\myListOfFigures{Liste des figures}
 	
 	% Resum� et abstract
 	\input{Resume/Resume}
@@ -70,11 +70,11 @@
 	\input{Chap2/Chap2}
 	%\part{Another part}
 	\input{Chap3/Chap3}
-	%\input{Chap4/Chap4}
+	\input{Chap4/Chap4}
 	
 	%Ainsi de suite
 	
-	%\input{Conclusion/Conclusion}
+	\input{Conclusion/Conclusion}
 	
 	%************ Bibliographie ***************
 	% La charte de l'�cole doctorale recommande un style dans lequel les citations seront de la forme (NomAuteur, Ann�e) ou (NomAuteur et al., Ann�e)
@@ -88,5 +88,4 @@
 	%\input{Appendices/Appendix1}
 	%\input{Appendices/Appendix2}
 	%Ainsi de suite
-}
 \end{document}
